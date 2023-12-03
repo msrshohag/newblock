@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test - AHZ</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <section class="bg-white max-w-screen-xl py-6 px-4 mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-1 gap-3">
+      <section class="bg-white  antialiased">
+        <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
+          <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl font-extrabold leading-tight tracking-tight text-gray-900 ">
+              Asset Management
+            </h2>
+          </div>
+
+          <div class="mt-8 lg:mt-12 w-full text-white">
+            <ul class="flex justify-between text-center" id="myTab" role="tablist">
+
+              <li class="mr-3 mb-3 lg:mb-0 w-1/4 rounded-2xl bg-blue-950" role="presentation">
+                <div class="w-full shrink-0 rounded-2xl shadow-lg p-3 pt-4" id="day1-tab" role="tab"
+                  aria-controls="day1" aria-selected="false">
+                  <div class="flex items-center justify-between">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="h-14 w-14 text-indigo-500">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
+                    </svg>
+
+                    <p class="text-salte-400 rounded-2xl bg-rose-500 px-2 py-1 text-lg text-white"><span
+                        class="font-bold">22</span> Files</p>
+                  </div>
+                  <div class="flex items-center justify-between pt-5">
+                    <div class="text-primary dark:text-accent-light text-base font-medium tracking-wide">Content Images
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="h-6 w-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </li>
+
+
+              <li class="mr-3 mb-3 lg:mb-0 w-1/4 rounded-2xl bg-blue-950" role="presentation">
+                <div class="w-full shrink-0 rounded-2xl shadow-lg p-3 pt-4" id="day2-tab" role="tab"
+                  aria-controls="day1" aria-selected="false">
+                  <div class="flex items-center justify-between">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="h-14 w-14 text-green-500">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
+                    </svg>
+
+                    <p class="text-salte-400 rounded-2xl bg-green-500 px-2 py-1 text-lg text-white"><span
+                        class="font-bold">22</span> Files</p>
+                  </div>
+                  <div class="flex items-center justify-between pt-5">
+                    <div class="text-primary dark:text-accent-light text-base font-medium tracking-wide">Images</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="h-6 w-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </li>
+
+              <li class="mr-3 mb-3 lg:mb-0 w-1/4 rounded-2xl bg-blue-950" role="presentation">
+                <div class="w-full shrink-0 rounded-2xl shadow-lg p-3 pt-4" id="day3-tab" role="tab"
+                  aria-controls="day1" aria-selected="true">
+                  <div class="flex items-center justify-between">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="h-14 w-14 text-yellow-500">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
+                    </svg>
+
+                    <p class="text-salte-400 rounded-2xl bg-yellow-500 px-2 py-1 text-lg text-white"><span
+                        class="font-bold">22</span> Files</p>
+                  </div>
+                  <div class="flex items-center justify-between pt-5">
+                    <div class="text-primary dark:text-accent-light text-base font-medium tracking-wide">Content Files
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="h-6 w-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </li>
+
+              <li class="mr-3 mb-3 lg:mb-0 w-1/4 rounded-2xl bg-blue-950" role="presentation">
+                <div class="w-full shrink-0 rounded-2xl shadow-lg p-3 pt-4" id="day4-tab" role="tab"
+                  aria-controls="day1" aria-selected="false">
+                  <div class="flex items-center justify-between">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="h-14 w-14 text-pink-500">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
+                    </svg>
+
+                    <p class="text-salte-400 rounded-2xl bg-pink-500 px-2 py-1 text-lg text-white"><span
+                        class="font-bold">22</span> Files</p>
+                  </div>
+                  <div class="flex items-center justify-between pt-5">
+                    <div class="text-primary dark:text-accent-light text-base font-medium tracking-wide">Files</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="h-6 w-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+          <div id="myTabContent" class="mt-8 lg:mt-12">
+            <!-- Tab one -->
+            <div class="hidden" id="day1" role="tabpanel" aria-labelledby="day1-tab">
+              <section class="bg-gray-50">
+                <div class="mx-auto max-w-screen-xl">
+                  <!-- Start coding here -->
+                  <div class="relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
+                    <div class="flex items-center justify-between p-4">
+                      <h2 class=" text-xl font-semibold">Content Images</h2>
+                      <button type="button"
+                        class="w-1/5 flex items-center justify-center rounded-full bg-blue-950 px-10 py-2 text-sm font-medium text-white hover:bg-red-600">
+                        <svg class="h-3.5 w-3.5 mr-2 flex-shrink-0 hidden md:inline" fill="currentColor"
+                          viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                          <path clip-rule="evenodd" fill-rule="evenodd"
+                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z">
+                          </path>
+                        </svg>
+                        <span> Add New Media </span>
+                      </button>
+                      <div class="w-2/5">
+                        <form class="flex items-center">
+                          <label for="simple-search" class="sr-only">Search</label>
+                          <div class="relative w-full">
+                            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                              <svg aria-hidden="true" class="h-5 w-5 text-gray-500" fill="currentColor"
+                                viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                  clip-rule="evenodd" />
+                              </svg>
+                            </div>
+                            <input type="text" id="simple-search"
+                              class="focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 pl-10 text-sm text-gray-900"
+                              placeholder="Search" required="" />
+                          </div>
+                        </form>
+                      </div>
+
+                      <div class="flex items-center justify-end ">
+                        <div class="flex justify-end w-1/2">
+                          <span class="inline-flex rounded-md shadow-sm isolate">
+                            <button type="button" id="gird_view_btn"
+                              class="relative bg-blue-950 inline-flex items-center px-3 py-2 text-sm font-semibold text-white rounded-l-md ring-1 ring-inset ring-gray-300 hover:bg-blue-950 hover:text-white focus:z-10">
+                              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-8.25zM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-2.25z">
+                                </path>
+                              </svg>
+                              <h2 class="sr-only md:not-sr-only">Grid</h2>
+                            </button>
+                            <button type="button" id="list_view_btn"
+                              class="relative inline-flex items-center px-3 py-2 -ml-px text-sm font-semibold text-gray-900 bg-white rounded-r-md ring-1 ring-inset ring-gray-300 hover:bg-blue-950 hover:text-white focus:z-10">
+                              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z">
+                                </path>
+                              </svg>
+                              <h2 class="sr-only md:not-sr-only">List</h2>
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="overflow-x-auto">
+                      <div class="w-full text-center text-sm text-gray-500">
+                        <div id="list_div" style="display: none;">
+                          <ul role="list"
+                            class="border-b dark:border-gray-700 text-left flex items-center justify-between">
+                            <li scope="row" class="whitespace-nowrap px-4 py-3 font-medium text-gray-900">
+                              Name of file
+                            </li>
+                            <li scope="row" class="whitespace-nowrap px-4 py-3 font-medium text-gray-900">
+                              <img class="w-20 h-20 rounded-lg"
+                                src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10143788_top-uk-university-course-for-emplyability.jpg"
+                                alt="">
+                            </li>
+                            <li class="px-4 py-3 flex space-x-3">
+                              <div
+                                class="mb-3 flex w-full flex-shrink-0 flex-col items-stretch justify-center md:mb-0 md:w-auto md:flex-row md:items-center md:space-x-3">
+                                <button type="button"
+                                  class="focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center justify-center rounded-full bg-blue-950 px-10 py-2 text-sm font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-4">
+                                  Copy URL
+                                </button>
+                              </div>
+                              <div
+                                class="mb-3 flex w-full flex-shrink-0 flex-col items-stretch justify-center md:mb-0 md:w-auto md:flex-row md:items-center md:space-x-3">
+                                <button type="button"
+                                  class="focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center justify-center rounded-full bg-red-600 px-10 py-2 text-sm font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-4">
+                                  Remove
+                                </button>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div id="grid_div">
+                          <tr class="border-b dark:border-gray-700 text-left flex items-center justify-between">
+                            <ul role="list"
+                              class="grid grid-cols-2 px-3 py-3 gap-x-4 gap-y-8 lg:grid-cols-5 xl:gap-x-8">
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10143788_top-uk-university-course-for-emplyability.jpg"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10143788_top-uk-university-course-for-emplyability.jpg"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_0"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10143788_top-uk-university-course-for-emplyability.jpg">
+                                <input type="hidden" id="file_name_0"
+                                  value="content_images/10143788_top-uk-university-course-for-emplyability.jpg">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  10143788_top-uk-university-course-for-emplyability.jpg
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_0"
+                                    class="copy_btn rounded bg-primary-50 px-2 py-1 text-xs font-semibold text-primary-600 shadow-sm hover:bg-primary-100">
+                                    Copy Url
+                                  </button>
+                                  <button type="button" id="delete_0" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10247834_Google-Playstore-Icon.png"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10247834_Google-Playstore-Icon.png"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_1"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10247834_Google-Playstore-Icon.png">
+                                <input type="hidden" id="file_name_1"
+                                  value="content_images/10247834_Google-Playstore-Icon.png">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  10247834_Google-Playstore-Icon.png
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_1"
+                                    class="copy_btn rounded bg-primary-50 px-2 py-1 text-xs font-semibold text-primary-600 shadow-sm hover:bg-primary-100">
+                                    Copy Url
+                                  </button>
+                                  <button type="button" id="delete_1" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10269154_University-of-Portsmouth.png"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10269154_University-of-Portsmouth.png"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_2"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10269154_University-of-Portsmouth.png">
+                                <input type="hidden" id="file_name_2"
+                                  value="content_images/10269154_University-of-Portsmouth.png">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  10269154_University-of-Portsmouth.png
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_2"
+                                    class="copy_btn rounded bg-primary-50 px-2 py-1 text-xs font-semibold text-primary-600 shadow-sm hover:bg-primary-100">
+                                    Copy Url
+                                  </button>
+                                  <button type="button" id="delete_2" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10400257_top-uk-university-course-for-emplyability.jpg"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10400257_top-uk-university-course-for-emplyability.jpg"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_3"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10400257_top-uk-university-course-for-emplyability.jpg">
+                                <input type="hidden" id="file_name_3"
+                                  value="content_images/10400257_top-uk-university-course-for-emplyability.jpg">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  10400257_top-uk-university-course-for-emplyability.jpg
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_3"
+                                    class="copy_btn rounded bg-primary-50 px-2 py-1 text-xs font-semibold text-primary-600 shadow-sm hover:bg-primary-100">
+                                    Copy Url
+                                  </button>
+                                  <button type="button" id="delete_3" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/104965857_Cranfield%20University.jpg"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/104965857_Cranfield%20University.jpg"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_4"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/104965857_Cranfield%20University.jpg">
+                                <input type="hidden" id="file_name_4"
+                                  value="content_images/104965857_Cranfield University.jpg">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  104965857_Cranfield University.jpg
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_4"
+                                    class="copy_btn rounded bg-primary-50 px-2 py-1 text-xs font-semibold text-primary-600 shadow-sm hover:bg-primary-100">
+                                    Copy Url
+                                  </button>
+                                  <button type="button" id="delete_4" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                            </ul>
+                          </tr>
+                        </div>
+                      </div>
+                    </div>
+                    <nav
+                      class="flex flex-col items-start justify-between space-y-3 p-4 md:flex-row md:items-center md:space-y-0"
+                      aria-label="Table navigation">
+                      <span class="text-sm font-normal text-gray-500">
+                        Showing
+                        <span class="font-semibold text-gray-900">1-10</span>
+                        of
+                        <span class="font-semibold text-gray-900">1000</span>
+                      </span>
+                      <ul class="inline-flex items-stretch -space-x-px">
+                        <li>
+                          <a href="#"
+                            class="ml-0 flex h-full items-center justify-center rounded-l-lg border border-gray-300 bg-white px-3 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">
+                            <span class="sr-only">Previous</span>
+                            <svg class="h-5 w-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd"
+                                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex items-center justify-center border border-gray-300 bg-white px-3 py-2 text-sm leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex items-center justify-center border border-gray-300 bg-white px-3 py-2 text-sm leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                        </li>
+                        <li>
+                          <a href="#" aria-current="page"
+                            class="text-primary-600 bg-primary-50 border-primary-300 hover:bg-primary-100 hover:text-primary-700 z-10 flex items-center justify-center border px-3 py-2 text-sm leading-tight dark:border-gray-700">3</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex items-center justify-center border border-gray-300 bg-white px-3 py-2 text-sm leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">...</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex items-center justify-center border border-gray-300 bg-white px-3 py-2 text-sm leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">100</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex h-full items-center justify-center rounded-r-lg border border-gray-300 bg-white px-3 py-1.5 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">
+                            <span class="sr-only">Next</span>
+                            <svg class="h-5 w-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <!-- Tab two -->
+            <div class="hidden" id="day2" role="tabpanel" aria-labelledby="day2-tab">
+
+              <section class="bg-gray-50">
+                <div class="mx-auto max-w-screen-xl">
+                  <!-- Start coding here -->
+                  <div class="relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
+                    <div class="flex items-center justify-between p-4">
+                      <h2 class=" text-xl font-semibold">Images</h2>
+                      <button type="button"
+                        class="w-1/5 flex items-center justify-center rounded-full bg-blue-950 px-10 py-2 text-sm font-medium text-white hover:bg-red-600">
+                        <svg class="h-3.5 w-3.5 mr-2 flex-shrink-0 hidden md:inline" fill="currentColor"
+                          viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                          <path clip-rule="evenodd" fill-rule="evenodd"
+                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z">
+                          </path>
+                        </svg>
+                        <span> Add New Media </span>
+                      </button>
+                      <div class="w-2/5">
+                        <form class="flex items-center">
+                          <label for="simple-search" class="sr-only">Search</label>
+                          <div class="relative w-full">
+                            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                              <svg aria-hidden="true" class="h-5 w-5 text-gray-500" fill="currentColor"
+                                viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                  clip-rule="evenodd" />
+                              </svg>
+                            </div>
+                            <input type="text" id="simple-search"
+                              class="focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 pl-10 text-sm text-gray-900"
+                              placeholder="Search" required="" />
+                          </div>
+                        </form>
+                      </div>
+
+                      <div class="flex items-center justify-end ">
+                        <div class="flex justify-end w-1/2">
+                          <span class="inline-flex rounded-md shadow-sm isolate">
+                            <button type="button" id="gird_view_btn"
+                              class="relative bg-blue-950 inline-flex items-center px-3 py-2 text-sm font-semibold text-white rounded-l-md ring-1 ring-inset ring-gray-300 hover:bg-blue-950 hover:text-white focus:z-10">
+                              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-8.25zM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-2.25z">
+                                </path>
+                              </svg>
+                              <h2 class="sr-only md:not-sr-only">Grid</h2>
+                            </button>
+                            <button type="button" id="list_view_btn"
+                              class="relative inline-flex items-center px-3 py-2 -ml-px text-sm font-semibold text-gray-900 bg-white rounded-r-md ring-1 ring-inset ring-gray-300 hover:bg-blue-950 hover:text-white focus:z-10">
+                              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z">
+                                </path>
+                              </svg>
+                              <h2 class="sr-only md:not-sr-only">List</h2>
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="overflow-x-auto">
+                      <div class="w-full text-center text-sm text-gray-500">
+                        <div id="list_div" style="display: none;">
+                          <ul role="list"
+                            class="border-b dark:border-gray-700 text-left flex items-center justify-between">
+                            <li scope="row" class="whitespace-nowrap px-4 py-3 font-medium text-gray-900">
+                              Name of file
+                            </li>
+                            <li scope="row" class="whitespace-nowrap px-4 py-3 font-medium text-gray-900">
+                              <img class="w-20 h-20 rounded-lg"
+                                src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10143788_top-uk-university-course-for-emplyability.jpg"
+                                alt="">
+                            </li>
+                            <li class="px-4 py-3 flex space-x-3">
+                              <div
+                                class="mb-3 flex w-full flex-shrink-0 flex-col items-stretch justify-center md:mb-0 md:w-auto md:flex-row md:items-center md:space-x-3">
+                                <button type="button"
+                                  class="focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center justi-950fy-center rounded-full bg-blue px-10 py-2 text-sm font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-4">
+                                  Copy URL
+                                </button>
+                              </div>
+                              <div
+                                class="mb-3 flex w-full flex-shrink-0 flex-col items-stretch justify-center md:mb-0 md:w-auto md:flex-row md:items-center md:space-x-3">
+                                <button type="button"
+                                  class="focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center justify-center rounded-full bg-red-600 px-10 py-2 text-sm font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-4">
+                                  Remove
+                                </button>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div id="grid_div">
+                          <tr class="border-b dark:border-gray-700 text-left flex items-center justify-between">
+                            <ul role="list"
+                              class="grid grid-cols-2 px-3 py-3 gap-x-4 gap-y-8 lg:grid-cols-5 xl:gap-x-8">
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10143788_top-uk-university-course-for-emplyability.jpg"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10143788_top-uk-university-course-for-emplyability.jpg"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_0"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10143788_top-uk-university-course-for-emplyability.jpg">
+                                <input type="hidden" id="file_name_0"
+                                  value="content_images/10143788_top-uk-university-course-for-emplyability.jpg">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  10143788_top-uk-university-course-for-emplyability.jpg
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_0"
+                                    class="copy_btn rounded bg-primary-50 px-2 py-1 text-xs font-semibold text-primary-600 shadow-sm hover:bg-primary-100">
+                                    Copy Url
+                                  </button>
+                                  <button type="button" id="delete_0" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10247834_Google-Playstore-Icon.png"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10247834_Google-Playstore-Icon.png"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_1"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10247834_Google-Playstore-Icon.png">
+                                <input type="hidden" id="file_name_1"
+                                  value="content_images/10247834_Google-Playstore-Icon.png">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  10247834_Google-Playstore-Icon.png
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_1"
+                                    class="copy_btn rounded bg-primary-50 px-2 py-1 text-xs font-semibold text-primary-600 shadow-sm hover:bg-primary-100">-950
+                                    blue URL
+                                  </button>
+                                  <button type="button" id="delete_1" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10269154_University-of-Portsmouth.png"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10269154_University-of-Portsmouth.png"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_2"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10269154_University-of-Portsmouth.png">
+                                <input type="hidden" id="file_name_2"
+                                  value="content_images/10269154_University-of-Portsmouth.png">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  10269154_University-of-Portsmouth.png
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_2"
+                                    class="copy_btn rounded bg-primary-50 px-2 py-1 text-xs font-semibold text-primary-600 shadow-sm hover:bg-primary-950-100">
+                                    blue URL
+                                  </button>
+                                  <button type="button" id="delete_2" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10400257_top-uk-university-course-for-emplyability.jpg"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10400257_top-uk-university-course-for-emplyability.jpg"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_3"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10400257_top-uk-university-course-for-emplyability.jpg">
+                                <input type="hidden" id="file_name_3"
+                                  value="content_images/10400257_top-uk-university-course-for-emplyability.jpg">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  10400257_top-uk-university-course-for-emplyability.jpg
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_3"
+                                    class="copy_btn rounded bg-primary-50 px-2 py-1 text-xs font-semibold text-primary-600 shadow-sm hover:bg-p-950rimary-100">
+                                    blue URL
+                                  </button>
+                                  <button type="button" id="delete_3" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/104965857_Cranfield%20University.jpg"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/104965857_Cranfield%20University.jpg"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_4"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/104965857_Cranfield%20University.jpg">
+                                <input type="hidden" id="file_name_4"
+                                  value="content_images/104965857_Cranfield University.jpg">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  104965857_Cranfield University.jpg
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_4"
+                                    class="copy_btn rounded bg-primary-50 px-2 py-1 text-xs font-semibold text-primary-600 shadow-sm hove-950r:bg-primary-100">
+                                    blue URL
+                                  </button>
+                                  <button type="button" id="delete_4" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                            </ul>
+                          </tr>
+                        </div>
+                      </div>
+                    </div>
+                    <nav
+                      class="flex flex-col items-start justify-between space-y-3 p-4 md:flex-row md:items-center md:space-y-0"
+                      aria-label="Table navigation">
+                      <span class="text-sm font-normal text-gray-500">
+                        Showing
+                        <span class="font-semibold text-gray-900">1-10</span>
+                        of
+                        <span class="font-semibold text-gray-900">1000</span>
+                      </span>
+                      <ul class="inline-flex items-stretch -space-x-px">
+                        <li>
+                          <a href="#"
+                            class="ml-0 flex h-full items-center justify-center rounded-l-lg border border-gray-300 bg-white px-3 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">
+                            <span class="sr-only">Previous</span>
+                            <svg class="h-5 w-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd"
+                                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex items-center justify-center border border-gray-300 bg-white px-3 py-2 text-sm leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex items-center justify-center border border-gray-300 bg-white px-3 py-2 text-sm leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                        </li>
+                        <li>
+                          <a href="#" aria-current="page"
+                            class="text-primary-600 bg-primary-50 border-primary-300 hover:bg-primary-100 hover:text-primary-700 z-10 flex items-center justify-center border px-3 py-2 text-sm leading-tight dark:border-gray-700">3</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex items-center justify-center border border-gray-300 bg-white px-3 py-2 text-sm leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">...</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex items-center justify-center border border-gray-300 bg-white px-3 py-2 text-sm leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">100</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex h-full items-center justify-center rounded-r-lg border border-gray-300 bg-white px-3 py-1.5 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">
+                            <span class="sr-only">Next</span>
+                            <svg class="h-5 w-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <!-- Tab three -->
+            <div class="hidden" id="day3" role="tabpanel" aria-labelledby="day3-tab">
+
+              <section class="bg-gray-50">
+                <div class="mx-auto max-w-screen-xl">
+                  <!-- Start coding here -->
+                  <div class="relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
+                    <div class="flex items-center justify-between p-4">
+                      <h2 class=" text-xl font-semibold">Content Files</h2>
+                      <button type="button"
+                        class="w-1/5 flex items-center justify-center rounded-full bg-blue-950 px-10 py-2 text-sm font-medium text-white hover:bg-red-600">
+                        <svg class="h-3.5 w-3.5 mr-2 flex-shrink-0 hidden md:inline" fill="currentColor"
+                          viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                          <path clip-rule="evenodd" fill-rule="evenodd"
+                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z">
+                          </path>
+                        </svg>
+                        <span> Add New Media </span>
+                      </button>
+                      <div class="w-2/5">
+                        <form class="flex items-center">
+                          <label for="simple-search" class="sr-only">Search</label>
+                          <div class="relative w-full">
+                            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                              <svg aria-hidden="true" class="h-5 w-5 text-gray-500" fill="currentColor"
+                                viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                  clip-rule="evenodd" />
+                              </svg>
+                            </div>
+                            <input type="text" id="simple-search"
+                              class="focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 pl-10 text-sm text-gray-900"
+                              placeholder="Search" required="" />
+                          </div>
+                        </form>
+                      </div>
+
+                      <div class="flex items-center justify-end ">
+                        <div class="flex justify-end w-1/2">
+                          <span class="inline-flex rounded-md shadow-sm isolate">
+                            <button type="button" id="gird_view_btn"
+                              class="relative bg-blue-950 inline-flex items-center px-3 py-2 text-sm font-semibold text-white rounded-l-md ring-1 ring-inset ring-gray-300 hover:bg-blue-950 hover:text-white focus:z-10">
+                              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-8.25zM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-2.25z">
+                                </path>
+                              </svg>
+                              <h2 class="sr-only md:not-sr-only">Grid</h2>
+                            </button>
+                            <button type="button" id="list_view_btn"
+                              class="relative inline-flex items-center px-3 py-2 -ml-px text-sm font-semibold text-gray-900 bg-white rounded-r-md ring-1 ring-inset ring-gray-300 hover:bg-blue-950 hover:text-white focus:z-10">
+                              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z">
+                                </path>
+                              </svg>
+                              <h2 class="sr-only md:not-sr-only">List</h2>
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="overflow-x-auto">
+                      <div class="w-full text-center text-sm text-gray-500">
+                        <div id="list_div" style="display: none;">
+                          <ul role="list"
+                            class="border-b dark:border-gray-700 text-left flex items-center justify-between">
+                            <li scope="row" class="whitespace-nowrap px-4 py-3 font-medium text-gray-900">
+                              Name of file
+                            </li>
+                            <li scope="row" class="whitespace-nowrap px-4 py-3 font-medium text-gray-900">
+                              <img class="w-20 h-20 rounded-lg"
+                                src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10143788_top-uk-university-course-for-emplyability.jpg"
+                                alt="">
+                            </li>
+                            <li class="px-4 py-3 flex space-x-3">
+                              <div
+                                class="mb-3 flex w-full flex-shrink-0 flex-col items-stretch justify-center md:mb-0 md:w-auto md:flex-row md:items-center md:space-x-3">
+                                <button type="button"
+                                  class="focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-prima-950ry-800 flex items-center justify-center rounded-full bg-blue px-10 py-2 text-sm font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-4">
+                                  Copy URL
+                                </button>
+                              </div>
+                              <div
+                                class="mb-3 flex w-full flex-shrink-0 flex-col items-stretch justify-center md:mb-0 md:w-auto md:flex-row md:items-center md:space-x-3">
+                                <button type="button"
+                                  class="focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center justify-center rounded-full bg-red-600 px-10 py-2 text-sm font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-4">
+                                  Remove
+                                </button>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div id="grid_div">
+                          <tr class="border-b dark:border-gray-700 text-left flex items-center justify-between">
+                            <ul role="list"
+                              class="grid grid-cols-2 px-3 py-3 gap-x-4 gap-y-8 lg:grid-cols-5 xl:gap-x-8">
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10143788_top-uk-university-course-for-emplyability.jpg"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10143788_top-uk-university-course-for-emplyability.jpg"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_0"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10143788_top-uk-university-course-for-emplyability.jpg">
+                                <input type="hidden" id="file_name_0"
+                                  value="content_images/10143788_top-uk-university-course-for-emplyability.jpg">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  10143788_top-uk-university-course-for-emplyability.jpg
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_0"
+                                    class="copy_btn rounded bg-primary-50 px-2 py-1 text-xs font-semibold text-primary-600 shadow-s-950m hover:bg-primary-100">
+                                    blue URL
+                                  </button>
+                                  <button type="button" id="delete_0" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10247834_Google-Playstore-Icon.png"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10247834_Google-Playstore-Icon.png"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_1"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10247834_Google-Playstore-Icon.png">
+                                <input type="hidden" id="file_name_1"
+                                  value="content_images/10247834_Google-Playstore-Icon.png">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  10247834_Google-Playstore-Icon.png
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_1"
+                                    class="copy_btn rounded bg-primary-50 px-2 py-1 text-xs font-semibold text-primary-600 sh-950adow-sm hover:bg-primary-100">
+                                    blue URL
+                                  </button>
+                                  <button type="button" id="delete_1" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10269154_University-of-Portsmouth.png"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10269154_University-of-Portsmouth.png"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_2"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10269154_University-of-Portsmouth.png">
+                                <input type="hidden" id="file_name_2"
+                                  value="content_images/10269154_University-of-Portsmouth.png">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  10269154_University-of-Portsmouth.png
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_2"
+                                    class="copy_btn rounded bg-primary-50 px-2 py-1 text-xs font-semibold text-primary--950600 shadow-sm hover:bg-primary-100">
+                                    blue URL
+                                  </button>
+                                  <button type="button" id="delete_2" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10400257_top-uk-university-course-for-emplyability.jpg"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10400257_top-uk-university-course-for-emplyability.jpg"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_3"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10400257_top-uk-university-course-for-emplyability.jpg">
+                                <input type="hidden" id="file_name_3"
+                                  value="content_images/10400257_top-uk-university-course-for-emplyability.jpg">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  10400257_top-uk-university-course-for-emplyability.jpg
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_3"
+                                    class="copy_btn rounded bg-primary-50 px-2 py-1 text-xs font-semibold text-pr-950imary-600 shadow-sm hover:bg-primary-100">
+                                    blue URL
+                                  </button>
+                                  <button type="button" id="delete_3" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/104965857_Cranfield%20University.jpg"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/104965857_Cranfield%20University.jpg"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_4"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/104965857_Cranfield%20University.jpg">
+                                <input type="hidden" id="file_name_4"
+                                  value="content_images/104965857_Cranfield University.jpg">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  104965857_Cranfield University.jpg
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_4"
+                                    class="copy_btn rounded bg-primary-50 px-2 py-1 text-xs font-semibold t-950ext-primary-600 shadow-sm hover:bg-primary-100">
+                                    blue URL
+                                  </button>
+                                  <button type="button" id="delete_4" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                            </ul>
+                          </tr>
+                        </div>
+                      </div>
+                    </div>
+                    <nav
+                      class="flex flex-col items-start justify-between space-y-3 p-4 md:flex-row md:items-center md:space-y-0"
+                      aria-label="Table navigation">
+                      <span class="text-sm font-normal text-gray-500">
+                        Showing
+                        <span class="font-semibold text-gray-900">1-10</span>
+                        of
+                        <span class="font-semibold text-gray-900">1000</span>
+                      </span>
+                      <ul class="inline-flex items-stretch -space-x-px">
+                        <li>
+                          <a href="#"
+                            class="ml-0 flex h-full items-center justify-center rounded-l-lg border border-gray-300 bg-white px-3 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">
+                            <span class="sr-only">Previous</span>
+                            <svg class="h-5 w-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd"
+                                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex items-center justify-center border border-gray-300 bg-white px-3 py-2 text-sm leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex items-center justify-center border border-gray-300 bg-white px-3 py-2 text-sm leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                        </li>
+                        <li>
+                          <a href="#" aria-current="page"
+                            class="text-primary-600 bg-primary-50 border-primary-300 hover:bg-primary-100 hover:text-primary-700 z-10 flex items-center justify-center border px-3 py-2 text-sm leading-tight dark:border-gray-700">3</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex items-center justify-center border border-gray-300 bg-white px-3 py-2 text-sm leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">...</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex items-center justify-center border border-gray-300 bg-white px-3 py-2 text-sm leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">100</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex h-full items-center justify-center rounded-r-lg border border-gray-300 bg-white px-3 py-1.5 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">
+                            <span class="sr-only">Next</span>
+                            <svg class="h-5 w-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <!-- Tab four -->
+            <div class="hidden" id="day4" role="tabpanel" aria-labelledby="day4-tab">
+
+              <section class="bg-gray-50">
+                <div class="mx-auto max-w-screen-xl">
+                  <!-- Start coding here -->
+                  <div class="relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
+                    <div class="flex items-center justify-between p-4">
+                      <h2 class=" text-xl font-semibold">Files</h2>
+                      <button type="button"
+                        class="w-1/5 flex items-center justify-center rounded-full bg-blue-950 px-10 py-2 text-sm font-medium text-white hover:bg-red-600">
+                        <svg class="h-3.5 w-3.5 mr-2 flex-shrink-0 hidden md:inline" fill="currentColor"
+                          viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                          <path clip-rule="evenodd" fill-rule="evenodd"
+                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z">
+                          </path>
+                        </svg>
+                        <span> Add New Media </span>
+                      </button>
+                      <div class="w-2/5">
+                        <form class="flex items-center">
+                          <label for="simple-search" class="sr-only">Search</label>
+                          <div class="relative w-full">
+                            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                              <svg aria-hidden="true" class="h-5 w-5 text-gray-500" fill="currentColor"
+                                viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                  clip-rule="evenodd" />
+                              </svg>
+                            </div>
+                            <input type="text" id="simple-search"
+                              class="focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 pl-10 text-sm text-gray-900"
+                              placeholder="Search" required="" />
+                          </div>
+                        </form>
+                      </div>
+
+                      <div class="flex items-center justify-end ">
+                        <div class="flex justify-end w-1/2">
+                          <span class="inline-flex rounded-md shadow-sm isolate">
+                            <button type="button" id="gird_view_btn"
+                              class="relative bg-blue-950 inline-flex items-center px-3 py-2 text-sm font-semibold text-white rounded-l-md ring-1 ring-inset ring-gray-300 hover:bg-blue-950 hover:text-white focus:z-10">
+                              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-8.25zM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-2.25z">
+                                </path>
+                              </svg>
+                              <h2 class="sr-only md:not-sr-only">Grid</h2>
+                            </button>
+                            <button type="button" id="list_view_btn"
+                              class="relative inline-flex items-center px-3 py-2 -ml-px text-sm font-semibold text-gray-900 bg-white rounded-r-md ring-1 ring-inset ring-gray-300 hover:bg-blue-950 hover:text-white focus:z-10">
+                              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z">
+                                </path>
+                              </svg>
+                              <h2 class="sr-only md:not-sr-only">List</h2>
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="overflow-x-auto">
+                      <div class="w-full text-center text-sm text-gray-500">
+                        <div id="list_div" style="display: none;">
+                          <ul role="list"
+                            class="border-b dark:border-gray-700 text-left flex items-center justify-between">
+                            <li scope="row" class="whitespace-nowrap px-4 py-3 font-medium text-gray-900">
+                              Name of file
+                            </li>
+                            <li scope="row" class="whitespace-nowrap px-4 py-3 font-medium text-gray-900">
+                              <img class="w-20 h-20 rounded-lg"
+                                src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10143788_top-uk-university-course-for-emplyability.jpg"
+                                alt="">
+                            </li>
+                            <li class="px-4 py-3 flex space-x-3">
+                              <div
+                                class="mb-3 flex w-full flex-shrink-0 flex-col items-stretch justify-center md:mb-0 md:w-auto md:flex-row md:items-center md:space-x-3">
+                                <button type="button"
+                                  class="focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-pri-950mary-700 dark:focus:ring-primary-800 flex items-center justify-center rounded-full bg-blue px-10 py-2 text-sm font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-4">
+                                  Copy URL
+                                </button>
+                              </div>
+                              <div
+                                class="mb-3 flex w-full flex-shrink-0 flex-col items-stretch justify-center md:mb-0 md:w-auto md:flex-row md:items-center md:space-x-3">
+                                <button type="button"
+                                  class="focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 flex items-center justify-center rounded-full bg-red-600 px-10 py-2 text-sm font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-4">
+                                  Remove
+                                </button>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div id="grid_div">
+                          <tr class="border-b dark:border-gray-700 text-left flex items-center justify-between">
+                            <ul role="list"
+                              class="grid grid-cols-2 px-3 py-3 gap-x-4 gap-y-8 lg:grid-cols-5 xl:gap-x-8">
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10143788_top-uk-university-course-for-emplyability.jpg"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10143788_top-uk-university-course-for-emplyability.jpg"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_0"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10143788_top-uk-university-course-for-emplyability.jpg">
+                                <input type="hidden" id="file_name_0"
+                                  value="content_images/10143788_top-uk-university-course-for-emplyability.jpg">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  10143788_top-uk-university-course-for-emplyability.jpg
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_0"
+                                    class="copy_btn rounded bg-primary-50 px-2 py-1 text-xs font-semi-950bold text-primary-600 shadow-sm hover:bg-primary-100">
+                                    blue URL
+                                  </button>
+                                  <button type="button" id="delete_0" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10247834_Google-Playstore-Icon.png"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10247834_Google-Playstore-Icon.png"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_1"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10247834_Google-Playstore-Icon.png">
+                                <input type="hidden" id="file_name_1"
+                                  value="content_images/10247834_Google-Playstore-Icon.png">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  10247834_Google-Playstore-Icon.png
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_1"
+                                    class="copy_btn rounded bg-primary-50 px-2 py-1 text-xs fon-950t-semibold text-primary-600 shadow-sm hover:bg-primary-100">
+                                    blue URL
+                                  </button>
+                                  <button type="button" id="delete_1" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10269154_University-of-Portsmouth.png"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10269154_University-of-Portsmouth.png"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_2"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10269154_University-of-Portsmouth.png">
+                                <input type="hidden" id="file_name_2"
+                                  value="content_images/10269154_University-of-Portsmouth.png">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  10269154_University-of-Portsmouth.png
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_2"
+                                    class="copy_btn rounded bg-primary-50 px-2 py-1 text--950xs font-semibold text-primary-600 shadow-sm hover:bg-primary-100">
+                                    blue URL
+                                  </button>
+                                  <button type="button" id="delete_2" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10400257_top-uk-university-course-for-emplyability.jpg"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10400257_top-uk-university-course-for-emplyability.jpg"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_3"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/10400257_top-uk-university-course-for-emplyability.jpg">
+                                <input type="hidden" id="file_name_3"
+                                  value="content_images/10400257_top-uk-university-course-for-emplyability.jpg">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  10400257_top-uk-university-course-for-emplyability.jpg
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_3"
+                                    class="copy_btn rounded bg-primary-50 px-2 py-1-950 text-xs font-semibold text-primary-600 shadow-sm hover:bg-primary-100">
+                                    blue URL
+                                  </button>
+                                  <button type="button" id="delete_3" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                              <li class="relative">
+                                <div class="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg
+  bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2
+  focus-within:ring-offset-gray-100 h-[200px] max-w-[200px]">
+                                  <a href="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/104965857_Cranfield%20University.jpg"
+                                    target="_blank" class="h-full">
+                                    <img
+                                      src="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/104965857_Cranfield%20University.jpg"
+                                      alt=""
+                                      class="pointer-events-none object-cover group-hover:opacity-75 h-full object-center">
+                                  </a>
+                                </div>
+                                <input type="hidden" id="file_url_4"
+                                  value="https://s3.eu-west-2.amazonaws.com/ahzassociates.co.uk/content_images/104965857_Cranfield%20University.jpg">
+                                <input type="hidden" id="file_name_4"
+                                  value="content_images/104965857_Cranfield University.jpg">
+                                <p class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+                                  104965857_Cranfield University.jpg
+                                </p>
+                                <div class="flex mt-2">
+                                  <button type="button" id="copyBtn_4"
+                                    class="copy_btn rounded bg-primary-50 px--9502 py-1 text-xs font-semibold text-primary-600 shadow-sm hover:bg-primary-100">
+                                    blue URL
+                                  </button>
+                                  <button type="button" id="delete_4" data-modal-target="delete-modal"
+                                    data-modal-toggle="delete-modal"
+                                    class="delete_btn ml-2 rounded bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">
+                                    Remove
+                                  </button>
+                                </div>
+                              </li>
+                            </ul>
+                          </tr>
+                        </div>
+                      </div>
+                    </div>
+                    <nav
+                      class="flex flex-col items-start justify-between space-y-3 p-4 md:flex-row md:items-center md:space-y-0"
+                      aria-label="Table navigation">
+                      <span class="text-sm font-normal text-gray-500">
+                        Showing
+                        <span class="font-semibold text-gray-900">1-10</span>
+                        of
+                        <span class="font-semibold text-gray-900">1000</span>
+                      </span>
+                      <ul class="inline-flex items-stretch -space-x-px">
+                        <li>
+                          <a href="#"
+                            class="ml-0 flex h-full items-center justify-center rounded-l-lg border border-gray-300 bg-white px-3 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">
+                            <span class="sr-only">Previous</span>
+                            <svg class="h-5 w-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd"
+                                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex items-center justify-center border border-gray-300 bg-white px-3 py-2 text-sm leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex items-center justify-center border border-gray-300 bg-white px-3 py-2 text-sm leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                        </li>
+                        <li>
+                          <a href="#" aria-current="page"
+                            class="text-primary-600 bg-primary-50 border-primary-300 hover:bg-primary-100 hover:text-primary-700 z-10 flex items-center justify-center border px-3 py-2 text-sm leading-tight dark:border-gray-700">3</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex items-center justify-center border border-gray-300 bg-white px-3 py-2 text-sm leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">...</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex items-center justify-center border border-gray-300 bg-white px-3 py-2 text-sm leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">100</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="flex h-full items-center justify-center rounded-r-lg border border-gray-300 bg-white px-3 py-1.5 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">
+                            <span class="sr-only">Next</span>
+                            <svg class="h-5 w-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  <script>
+    // Learn more about the Flowbite Tabs API here: https://flowbite.com/docs/components/tabs/#javascript-behaviour
+
+    const tabElements = [
+      {
+        id: 'day1',
+        triggerEl: document.querySelector('#day1-tab'),
+        targetEl: document.querySelector('#day1')
+      },
+      {
+        id: 'day2',
+        triggerEl: document.querySelector('#day2-tab'),
+        targetEl: document.querySelector('#day2')
+      },
+      {
+        id: 'day3',
+        triggerEl: document.querySelector('#day3-tab'),
+        targetEl: document.querySelector('#day3')
+      },
+      {
+        id: 'day4',
+        triggerEl: document.querySelector('#day4-tab'),
+        targetEl: document.querySelector('#day4')
+      }
+    ];
+
+    // options with default values
+    const options = {
+      defaultTabId: 'day1',
+      activeClasses: 'bg-red-600 text-white',
+      inactiveClasses: 'bg-blue-950 hover:bg-red-600 text-white'
+    };
+
+    const tabs = new Tabs(tabElements, options);
+  </script>
+
+  <script>
+    $(document).on("click", '#gird_view_btn', function (e) {
+      $("#grid_div").show();
+      $("#list_div").hide();
+      $("#gird_view_btn").addClass("text-white bg-blue-950");
+      $("#list_view_btn").removeClass("text-white bg-blue-950");
+      $("#gird_view_btn").removeClass("text-gray-900 bg-white");
+    })
+    $(document).on("click", '#list_view_btn', function (e) {
+      $("#grid_div").hide();
+      $("#list_div").show();
+      $("#list_view_btn").addClass("text-white bg-blue-950");
+      $("#gird_view_btn").removeClass("text-white bg-blue-950");
+      $("#list_view_btn").removeClass("text-gray-900 bg-white");
+    })
+  </script>
+</body>
+
+</html>
