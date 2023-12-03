@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test - AHZ</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <section class="p-6">
+        <div class="flex flex-col lg:flex-row items-start justify-between lg:space-x-12">
+            <div class="w-full space-y-2" id="accordion-flush" data-accordion="collapse"
+                data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+                data-inactive-classes="text-gray-500 dark:text-gray-400">
+                <h2 id="accordion-flush-heading-1">
+                    <button type="button"
+                        class="flex w-full items-center justify-between px-6 hover:bg-gray-300 hover:text-red-500 border border-gray-300 py-5 text-left font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400"
+                        data-accordion-target="#accordion-flush-body-1" aria-expanded="false"
+                        aria-controls="accordion-flush-body-1">
+                        <div class="flex space-x-2 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                            </svg>
+                            <span class="text-lg font-semibold">Consultation with counsellor</span>
+                        </div>
+                        <svg data-accordion-icon class="h-3 w-3 shrink-0 rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </button>
+                </h2>
+
+                <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+                    <div class="border-b border-gray-200 py-5 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400 px-6">
+                            Our expert counsellor will explain the complete process of UK university application and
+                            discuss your study and career goals.
+                        </p>
+                    </div>
+                </div>
+                <h2 id="accordion-flush-heading-2">
+                    <button type="button"
+                        class="flex w-full items-center justify-between px-6 hover:bg-gray-300 hover:text-red-500 border border-gray-300 py-5 text-left font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400"
+                        data-accordion-target="#accordion-flush-body-2" aria-expanded="false"
+                        aria-controls="accordion-flush-body-2">
+                        <div class="flex space-x-2 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                            </svg>
+                            <span class="text-lg font-semibold">Find a course in a suitable University</span>
+                        </div>
+                        <svg data-accordion-icon class="h-3 w-3 shrink-0 rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </button>
+                </h2>
+
+                <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+                    <div class="border-b border-gray-200 py-5 dark:border-gray-700 px-6">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400  ">
+                            A counsellor will assess your academic background and suggest suitable universities where
+                            you will be able to secure offers.
+                        </p>
+                        <a href="/find?Course=true"
+                            class="uppercase mt-3 px-4 text-sm py-3 bg-red-700 font-semibold text-white rounded-3xl">
+                            Find a course
+                        </a>
+                    </div>
+                </div>
+                <h2 id="accordion-flush-heading-3">
+                    <button type="button"
+                        class="flex w-full items-center justify-between px-6 hover:bg-gray-300 hover:text-red-500 border border-gray-300 py-5 text-left font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400"
+                        data-accordion-target="#accordion-flush-body-3" aria-expanded="false"
+                        aria-controls="accordion-flush-body-3">
+                        <div class="flex space-x-2 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                            </svg>
+                            <span class="text-lg font-semibold">Prepare your application</span>
+                        </div>
+                        <svg data-accordion-icon class="h-3 w-3 shrink-0 rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </button>
+                </h2>
+
+
+                <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+                    <div class="border-b border-gray-200 py-5 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400  px-6">
+                            Your counsellor will review your personal statement, CV, reference letters and application
+                            forms before sending them to your chosen universities.
+                        </p>
+                    </div>
+                </div>
+                <h2 id="accordion-flush-heading-4">
+                    <button type="button"
+                        class="flex w-full items-center justify-between px-6 hover:bg-gray-300 hover:text-red-500 border border-gray-300 py-5 text-left font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400"
+                        data-accordion-target="#accordion-flush-body-4" aria-expanded="false"
+                        aria-controls="accordion-flush-body-4">
+                        <div class="flex space-x-2 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                            </svg>
+                            <span class="text-lg font-semibold">Receive offers from University</span>
+                        </div>
+                        <svg data-accordion-icon class="h-3 w-3 shrink-0 rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
+                    <div class="border-b border-gray-200 py-5 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400  px-6">
+                            We will ensure you to receive conditional or unconditional offers after your UK university
+                            application process. We will guide you in making the right choice for a course as well.
+                        </p>
+                    </div>
+                </div>
+                <h2 id="accordion-flush-heading-5">
+                    <button type="button"
+                        class="flex w-full items-center justify-between px-6 hover:bg-gray-300 hover:text-red-500 border border-gray-300 py-5 text-left font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400"
+                        data-accordion-target="#accordion-flush-body-5" aria-expanded="false"
+                        aria-controls="accordion-flush-body-5">
+                        <div class="flex space-x-2 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                            </svg>
+                            <span class="text-lg font-semibold">Help with offer letter next steps</span>
+                        </div>
+                        <svg data-accordion-icon class="h-3 w-3 shrink-0 rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-5" class="hidden" aria-labelledby="accordion-flush-heading-5">
+                    <div class="border-b border-gray-200 py-5 px-6 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400  ">
+                            Your counsellor will help you with Next Steps to comply with University offers:
+
+                            <li>Provide documents to meet conditions of offer</li>
+                            <li>Pay deposit and complete International Student Reply Form</li>
+                            <li>Pre CAS and Maintenance checks</li>
+                            <li>CAS issued</li>
+                        </p>
+                    </div>
+                </div>
+                <h2 id="accordion-flush-heading-6">
+                    <button type="button"
+                        class="flex w-full items-center justify-between px-6 hover:bg-gray-300 hover:text-red-500 border border-gray-300 py-5 text-left font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400"
+                        data-accordion-target="#accordion-flush-body-6" aria-expanded="false"
+                        aria-controls="accordion-flush-body-6">
+                        <div class="flex space-x-2 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                            </svg>
+                            <span class="text-lg font-semibold">Secure Tier-4 student visa in the UK</span>
+                        </div>
+                        <svg data-accordion-icon class="h-3 w-3 shrink-0 rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </button>
+                </h2>
+
+                <div id="accordion-flush-body-6" class="hidden" aria-labelledby="accordion-flush-heading-6">
+                    <div class="border-b border-gray-200 py-5 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400  px-6">
+                            We will guide you all the way with UK university application and to obtain the Tier 4
+                            Student Visa to study in the UK and will assist you to gather all the documents to get the
+                            visa.
+                        </p>
+                    </div>
+                </div>
+                <h2 id="accordion-flush-heading-7">
+                    <button type="button"
+                        class="flex w-full items-center justify-between px-6 hover:bg-gray-300 hover:text-red-500 border border-gray-300 py-5 text-left font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400"
+                        data-accordion-target="#accordion-flush-body-7" aria-expanded="false"
+                        aria-controls="accordion-flush-body-7">
+                        <div class="flex space-x-2 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                            </svg>
+                            <span class="text-lg font-semibold">Continuous support</span>
+                        </div>
+                        <svg data-accordion-icon class="h-3 w-3 shrink-0 rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-7" class="hidden" aria-labelledby="accordion-flush-heading-7">
+                    <div class="border-b border-gray-200 py-5 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400  px-6">
+                            We offer endless support for a new student in UK. Our student services include Airport Pick
+                            Up,
+                            Accommodation arrangement, applying for Student Travel Card, opening UK Bank Account and
+                            many
+                            more.
+                        </p>
+                        <p class="mb-2 text-gray-500 dark:text-gray-400  px-6">
+                            If you require more information about UK university application, arrange a free consultation
+                            with one of our student adviser today through our UK University Application.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+</body>
+
+</html>
