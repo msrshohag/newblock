@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test - AHZ</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <section>
+        <div class="flex flex-col lg:flex-row items-start justify-between lg:space-x-12">
+            <div class="w-full lg:w-1/2" id="accordion-flush" data-accordion="collapse"
+                data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+                data-inactive-classes="text-gray-500 dark:text-gray-400">
+                <h2 id="accordion-flush-heading-1">
+                    <button type="button"
+                        class="flex w-full items-center justify-between border-b border-gray-200 py-5 text-left font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400"
+                        data-accordion-target="#accordion-flush-body-1" aria-expanded="true"
+                        aria-controls="accordion-flush-body-1">
+                        <div class="flex space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                            </svg>
+                            <span class="text-lg font-semibold">Title goes here</span>
+                        </div>
+                        <svg data-accordion-icon class="h-3 w-3 shrink-0 rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+                    <div class="border-b border-gray-200 py-5 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of
+                            interactive
+                            components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and
+                            more.
+                        </p>
+                        <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a
+                                href="/docs/getting-started/introduction/"
+                                class="text-blue-600 hover:underline dark:text-blue-500">get started</a> and start
+                            developing websites even faster with components on top of Tailwind CSS.</p>
+                    </div>
+                </div>
+                <h2 id="accordion-flush-heading-2">
+                    <button type="button"
+                        class="flex w-full items-center justify-between border-b border-gray-200 py-5 text-left font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400"
+                        data-accordion-target="#accordion-flush-body-2" aria-expanded="false"
+                        aria-controls="accordion-flush-body-2">
+                        <div class="flex space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                            </svg>
+                            <span class="text-lg font-semibold">Title goes here</span>
+                        </div>
+                        <svg data-accordion-icon class="h-3 w-3 shrink-0 rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+                    <div class="border-b border-gray-200 py-5 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed
+                            using
+                            the Figma software so everything you see in the library has a design equivalent in our Figma
+                            file.</p>
+                        <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/"
+                                class="text-blue-600 hover:underline dark:text-blue-500">Figma design system</a> based
+                            on
+                            the utility classes from Tailwind CSS and components from Flowbite.</p>
+                    </div>
+                </div>
+                <h2 id="accordion-flush-heading-3">
+                    <button type="button"
+                        class="flex w-full items-center justify-between border-b border-gray-200 py-5 text-left font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400"
+                        data-accordion-target="#accordion-flush-body-3" aria-expanded="false"
+                        aria-controls="accordion-flush-body-3">
+                        <div class="flex space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                            </svg>
+                            <span class="text-lg font-semibold">Title goes here</span>
+                        </div>
+                        <svg data-accordion-icon class="h-3 w-3 shrink-0 rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+                    <div class="border-b border-gray-200 py-5 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components
+                            from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product.
+                            Another difference is that Flowbite relies on smaller and standalone components, whereas
+                            Tailwind UI offers sections of pages.</p>
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both
+                            Flowbite,
+                            Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using
+                            the
+                            best of two worlds.</p>
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
+                        <ul class="list-disc pl-5 text-gray-500 dark:text-gray-400">
+                            <li><a href="https://flowbite.com/pro/"
+                                    class="text-blue-600 hover:underline dark:text-blue-500">Flowbite Pro</a></li>
+                            <li><a href="https://tailwindui.com/" rel="nofollow"
+                                    class="text-blue-600 hover:underline dark:text-blue-500">Tailwind UI</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h2 id="accordion-flush-heading-5">
+                    <button type="button"
+                        class="flex w-full items-center justify-between border-b border-gray-200 py-5 text-left font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400"
+                        data-accordion-target="#accordion-flush-body-5" aria-expanded="false"
+                        aria-controls="accordion-flush-body-5">
+                        <div class="flex space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                            </svg>
+                            <span class="text-lg font-semibold">Title goes here2</span>
+                        </div>
+                        <svg data-accordion-icon class="h-3 w-3 shrink-0 rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-5" class="hidden" aria-labelledby="accordion-flush-heading-5">
+                    <div class="border-b border-gray-200 py-5 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components
+                            from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product.
+                            Another difference is that Flowbite relies on smaller and standalone components, whereas
+                            Tailwind UI offers sections of pages.</p>
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both
+                            Flowbite,
+                            Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using
+                            the
+                            best of two worlds.</p>
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
+                        <ul class="list-disc pl-5 text-gray-500 dark:text-gray-400">
+                            <li><a href="https://flowbite.com/pro/"
+                                    class="text-blue-600 hover:underline dark:text-blue-500">Flowbite
+                                    Pro</a></li>
+                            <li><a href="https://tailwindui.com/" rel="nofollow"
+                                    class="text-blue-600 hover:underline dark:text-blue-500">Tailwind UI</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2" id="accordion-flush" data-accordion="collapse"
+                data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+                data-inactive-classes="text-gray-500 dark:text-gray-400">
+                <h2 id="accordion-flush-heading-21">
+                    <button type="button"
+                        class="flex w-full items-center justify-between border-b border-gray-200 py-5 text-left font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400"
+                        data-accordion-target="#accordion-flush-body-21" aria-expanded="false"
+                        aria-controls="accordion-flush-body-21">
+                        <div class="flex space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                            </svg>
+                            <span class="text-lg font-semibold">Title goes here</span>
+                        </div>
+                        <svg data-accordion-icon class="h-3 w-3 shrink-0 rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-21" class="hidden" aria-labelledby="accordion-flush-heading-21">
+                    <div class="border-b border-gray-200 py-5 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of
+                            interactive
+                            components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and
+                            more.
+                        </p>
+                        <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a
+                                href="/docs/getting-started/introduction/"
+                                class="text-blue-600 hover:underline dark:text-blue-500">get started</a> and start
+                            developing websites even faster with components on top of Tailwind CSS.</p>
+                    </div>
+                </div>
+                <h2 id="accordion-flush-heading-22">
+                    <button type="button"
+                        class="flex w-full items-center justify-between border-b border-gray-200 py-5 text-left font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400"
+                        data-accordion-target="#accordion-flush-body-22" aria-expanded="false"
+                        aria-controls="accordion-flush-body-22">
+                        <div class="flex space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                            </svg>
+                            <span class="text-lg font-semibold">Title goes here</span>
+                        </div>
+                        <svg data-accordion-icon class="h-3 w-3 shrink-0 rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-22" class="hidden" aria-labelledby="accordion-flush-heading-22">
+                    <div class="border-b border-gray-200 py-5 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed
+                            using
+                            the Figma software so everything you see in the library has a design equivalent in our Figma
+                            file.</p>
+                        <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/"
+                                class="text-blue-600 hover:underline dark:text-blue-500">Figma design system</a> based
+                            on
+                            the utility classes from Tailwind CSS and components from Flowbite.</p>
+                    </div>
+                </div>
+                <h2 id="accordion-flush-heading-23">
+                    <button type="button"
+                        class="flex w-full items-center justify-between border-b border-gray-200 py-5 text-left font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400"
+                        data-accordion-target="#accordion-flush-body-23" aria-expanded="false"
+                        aria-controls="accordion-flush-body-23">
+                        <div class="flex space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                            </svg>
+                            <span class="text-lg font-semibold">Title goes here</span>
+                        </div>
+                        <svg data-accordion-icon class="h-3 w-3 shrink-0 rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+                        </svg>
+                    </button>
+                </h2>
+                <div id="accordion-flush-body-23" class="hidden" aria-labelledby="accordion-flush-heading-23">
+                    <div class="border-b border-gray-200 py-5 dark:border-gray-700">
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components
+                            from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product.
+                            Another difference is that Flowbite relies on smaller and standalone components, whereas
+                            Tailwind UI offers sections of pages.</p>
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both
+                            Flowbite,
+                            Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using
+                            the
+                            best of two worlds.</p>
+                        <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
+                        <ul class="list-disc pl-5 text-gray-500 dark:text-gray-400">
+                            <li><a href="https://flowbite.com/pro/"
+                                    class="text-blue-600 hover:underline dark:text-blue-500">Flowbite Pro</a></li>
+                            <li><a href="https://tailwindui.com/" rel="nofollow"
+                                    class="text-blue-600 hover:underline dark:text-blue-500">Tailwind UI</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+</body>
+
+</html>
