@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test - AHZ</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { "50": "#eff6ff", "100": "#dbeafe", "200": "#bfdbfe", "300": "#93c5fd", "400": "#60a5fa", "500": "#3b82f6", "600": "#2563eb", "700": "#1d4ed8", "800": "#1e40af", "900": "#1e3a8a", "950": "#172554" }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+            <!-- Pricing Card -->
+            <div
+                class="bg-white rounded-lg divide-y divide-gray-200 shadow dark:divide-gray-700 lg:divide-y-0 lg:divide-x lg:grid lg:grid-cols-3 dark:bg-gray-800">
+                <div class="col-span-2 p-6 lg:p-8">
+                    <h3 class="mb-4 text-lg font-medium text-gray-900 dark:text-white">Choose a pricing plan:</h3>
+                    <ul class="grid grid-cols-2 text-sm font-medium text-center text-gray-500 shadow md:rounded-lg md:grid-cols-4 dark:divide-gray-600 dark:text-gray-400"
+                        role="tablist">
+                        <li class="w-full" role="presentation">
+                            <button id="starter-tab" type="button"
+                                class="inline-block p-4 w-full border border-gray-200 dark:border-gray-500 md:rounded-l-lg">Starter</button>
+                        </li>
+                        <li class="w-full" role="presentation">
+                            <button id="standard-tab" type="button"
+                                class="inline-block p-4 w-full border dark:border-gray-500 border-gray-200">Standard</button>
+                        </li>
+                        <li class="w-full" role="presentation">
+                            <button id="premium-tab" type="button"
+                                class="inline-block p-4 w-full border dark:border-gray-500 border-gray-200">Premium</button>
+                        </li>
+                        <li class="w-full" role="presentation">
+                            <button id="enterprise-tab" type="button"
+                                class="inline-block p-4 w-full border border-gray-200 dark:border-gray-500 md:rounded-r-lg">Enterprise</button>
+                        </li>
+                    </ul>
+                    <div id="starter-content" class="hidden">
+                        <div class="mt-6 mb-2 font-medium text-gray-900 dark:text-white">Starter details:</div>
+                        <p class="text-lg font-light text-gray-500 dark:text-gray-400">Plan pricing starts at 250
+                            contacts.
+                            Select your audience size to calculate your price. The monthly email send limit for Standard
+                            plans is 12 times your maximum contact count.*.</p>
+                    </div>
+                    <div id="standard-content" class="hidden">
+                        <div class="mt-6 mb-2 font-medium text-gray-900 dark:text-white">Standard details:</div>
+                        <p class="text-lg font-light text-gray-500 dark:text-gray-400">Plan pricing starts at 500
+                            contacts.
+                            Select your audience size to calculate your price. The monthly email send limit for Standard
+                            plans is 12 times your maximum contact count.*.</p>
+                    </div>
+                    <div id="premium-content" class="hidden">
+                        <div class="mt-6 mb-2 font-medium text-gray-900 dark:text-white">Premium details:</div>
+                        <p class="text-lg font-light text-gray-500 dark:text-gray-400">Plan pricing starts at 1000
+                            contacts.
+                            Select your audience size to calculate your price. The monthly email send limit for Standard
+                            plans is 12 times your maximum contact count.*.</p>
+                    </div>
+                    <div id="enterprise-content" class="hidden">
+                        <div class="mt-6 mb-2 font-medium text-gray-900 dark:text-white">Enterprise details:</div>
+                        <p class="text-lg font-light text-gray-500 dark:text-gray-400">Plan pricing starts at unlimited
+                            contacts.
+                            Select your audience size to calculate your price. The monthly email send limit for Standard
+                            plans is 12 times your maximum contact count.*.</p>
+                    </div>
+                </div>
+                <div class="flex p-6 lg:p-8">
+                    <div id="starter-plan" class="hidden self-center w-full">
+                        <div class="mb-4 text-2xl font-semibold text-gray-900 dark:text-white">Starter plan</div>
+                        <div class="font-light text-gray-500 dark:text-gray-400">Starts at</div>
+                        <div class="mb-4 text-5xl font-extrabold text-gray-900 dark:text-white">$49</div>
+                        <a href="#"
+                            class="flex justify-center text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-bue-200 dark:focus:ring-primary-900 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-4">Buy
+                            now</a>
+                        <a href="#"
+                            class="flex items-center mb-4 font-medium text-primary-600 hover:text-primary-700 dark:text-primary-500">
+                            View team pricing
+                            <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">*To see the monthly email send limit
+                            included with your specific plan, click Calculate my price. If your plan's contact or email
+                            send limit is exceeded, you will be charged for overages.</p>
+                    </div>
+                    <div id="standard-plan" class="hidden self-center w-full">
+                        <div class="mb-4 text-2xl font-semibold text-gray-900 dark:text-white">Standard plan</div>
+                        <div class="font-light text-gray-500 dark:text-gray-400">Starts at</div>
+                        <div class="mb-4 text-5xl font-extrabold text-gray-900 dark:text-white">$99</div>
+                        <a href="#"
+                            class="flex justify-center text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-bue-200 dark:focus:ring-primary-900 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-4">Buy
+                            now</a>
+                        <a href="#"
+                            class="flex items-center mb-4 font-medium text-primary-600 hover:text-primary-700 dark:text-primary-500">
+                            View team pricing
+                            <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">*To see the monthly email send limit
+                            included with your specific plan, click Calculate my price. If your plan's contact or email
+                            send limit is exceeded, you will be charged for overages.</p>
+                    </div>
+                    <div id="premium-plan" class="hidden self-center w-full">
+                        <div class="mb-4 text-2xl font-semibold text-gray-900 dark:text-white">Premium plan</div>
+                        <div class="font-light text-gray-500 dark:text-gray-400">Starts at</div>
+                        <div class="mb-4 text-5xl font-extrabold text-gray-900 dark:text-white">$149</div>
+                        <a href="#"
+                            class="flex justify-center text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-bue-200 dark:focus:ring-primary-900 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-4">Buy
+                            now</a>
+                        <a href="#"
+                            class="flex items-center mb-4 font-medium text-primary-600 hover:text-primary-700 dark:text-primary-500">
+                            View team pricing
+                            <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">*To see the monthly email send limit
+                            included with your specific plan, click Calculate my price. If your plan's contact or email
+                            send limit is exceeded, you will be charged for overages.</p>
+                    </div>
+                    <div id="enterprise-plan" class="hidden self-center w-full">
+                        <div class="mb-4 text-2xl font-semibold text-gray-900 dark:text-white">Enterprise plan</div>
+                        <div class="font-light text-gray-500 dark:text-gray-400">Starts at</div>
+                        <div class="mb-4 text-5xl font-extrabold text-gray-900 dark:text-white">$249</div>
+                        <a href="#"
+                            class="flex justify-center text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-bue-200 dark:focus:ring-primary-900 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-4">Buy
+                            now</a>
+                        <a href="#"
+                            class="flex items-center mb-4 font-medium text-primary-600 hover:text-primary-700 dark:text-primary-500">
+                            View team pricing
+                            <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">*To see the monthly email send limit
+                            included with your specific plan, click Calculate my price. If your plan's contact or email
+                            send limit is exceeded, you will be charged for overages.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div id="accordion-color" data-accordion="collapse"
+            data-active-classes="bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white">
+            <h2 id="accordion-color-heading-1">
+                <button type="button"
+                    class="flex items-center justify-between w-full px-5 py-2 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-color-body-1" aria-expanded="true"
+                    aria-controls="accordion-color-body-1">
+                    <div class="flex items-center space-x-4">
+                        <img class="w-6 h-6 rotate-180 shrink-0" src="img/notices-board-icon.svg" alt="">
+                        <div class="px-3">
+                            <h2 class="text-left text-lg line-clamp-1">A quick brown fox jumps over the lazy dog. A
+                                quick brown fox
+                                jumps over the lazy dog.A quick brown fox jumps over the lazy dog.</h2>
+                            <span class="text-left text-sm">01-02-1990</span>
+                        </div>
+                    </div>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5 5 1 1 5" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
+                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive
+                        components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a
+                            href="/docs/getting-started/introduction/"
+                            class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start
+                        developing
+                        websites even faster with components on top of Tailwind CSS.</p>
+                </div>
+            </div>
+            <h2 id="accordion-color-heading-2">
+                <button type="button"
+                    class="flex items-center justify-between w-full px-5 py-2 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-color-body-2" aria-expanded="false"
+                    aria-controls="accordion-color-body-2">
+                    <div class="flex items-center space-x-4">
+                        <img class="w-6 h-6 rotate-180 shrink-0" src="img/notices-board-icon.svg" alt="">
+                        <div class="px-3">
+                            <h2 class="text-left text-lg line-clamp-1">A quick brown fox jumps over the lazy dog. A
+                                quick brown fox
+                                jumps over the lazy dog.A quick brown fox jumps over the lazy dog.</h2>
+                            <span class="text-left text-sm">01-02-1990</span>
+                        </div>
+                    </div>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5 5 1 1 5" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
+                <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using
+                        the
+                        Figma software so everything you see in the library has a design equivalent in our Figma file.
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/"
+                            class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on
+                        the
+                        utility classes from Tailwind CSS and components from Flowbite.</p>
+                </div>
+            </div>
+            <h2 id="accordion-color-heading-3">
+                <button type="button"
+                    class="flex items-center justify-between w-full px-5 py-2 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
+                    data-accordion-target="#accordion-color-body-3" aria-expanded="false"
+                    aria-controls="accordion-color-body-3">
+                    <div class="flex items-center space-x-4">
+                        <img class="w-6 h-6 rotate-180 shrink-0" src="img/notices-board-icon.svg" alt="">
+                        <div class="px-3">
+                            <h2 class="text-left text-lg line-clamp-1">A quick brown fox jumps over the lazy dog. A
+                                quick brown fox
+                                jumps over the lazy dog.A quick brown fox jumps over the lazy dog.</h2>
+                            <span class="text-left text-sm">01-02-1990</span>
+                        </div>
+                    </div>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5 5 1 1 5" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
+                <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components
+                        from
+                        Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another
+                        difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI
+                        offers
+                        sections of pages.</p>
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite,
+                        Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the
+                        best
+                        of two worlds.</p>
+                    <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
+                    <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                        <li><a href="https://flowbite.com/pro/"
+                                class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
+                        <li><a href="https://tailwindui.com/" rel="nofollow"
+                                class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script>
+        const pricingTabEls = [
+            {
+                id: 'starter',
+                triggerEl: document.querySelector('#starter-tab'),
+                targetEl: document.querySelector('#starter-content'),
+                pricingEl: document.querySelector('#starter-plan')
+            },
+            {
+                id: 'standard',
+                triggerEl: document.querySelector('#standard-tab'),
+                targetEl: document.querySelector('#standard-content'),
+                pricingEl: document.querySelector('#standard-plan')
+            },
+            {
+                id: 'premium',
+                triggerEl: document.querySelector('#premium-tab'),
+                targetEl: document.querySelector('#premium-content'),
+                pricingEl: document.querySelector('#premium-plan')
+            },
+            {
+                id: 'enterprise',
+                triggerEl: document.querySelector('#enterprise-tab'),
+                targetEl: document.querySelector('#enterprise-content'),
+                pricingEl: document.querySelector('#enterprise-plan')
+            }
+        ];
+
+        const options = {
+            defaultTabId: 'standard',
+            activeClasses: 'text-gray-900 bg-gray-100 dark:bg-gray-600 dark:text-white',
+            inactiveClasses: 'bg-white hover:text-gray-700 hover:bg-gray-50 dark:hover:text-white dark:bg-gray-700 dark:hover:bg-gray-600',
+            onShow(context) {
+                const activeTab = context.getActiveTab();
+                pricingTabEls.map(function (el) {
+                    el.pricingEl.classList.add('hidden')
+                })
+                activeTab.pricingEl.classList.remove('hidden');
+            }
+        }
+
+        const pricingTabs = new Tabs(pricingTabEls, options);
+    </script>
+</body>
+
+</html>
