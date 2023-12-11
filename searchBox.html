@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SearchBox - AHZ</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: "#eff6ff",
+                            100: "#dbeafe",
+                            200: "#bfdbfe",
+                            300: "#93c5fd",
+                            400: "#60a5fa",
+                            500: "#3b82f6",
+                            600: "#2563eb",
+                            700: "#1d4ed8",
+                            800: "#1e40af",
+                            900: "#1e3a8a",
+                            950: "#172554",
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body>
+    <div>
+        <section class="bg-gray-100 bg-blend-multiply">
+            <div class="relative py-8 px-4 mx-auto max-w-screen-xl text-white lg:py-16 xl:px-0 z-1">
+                <!-- Start coding here -->
+                <div class="relative px-4 bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
+                    <div
+                        class="flex flex-col py-3 space-y-3 md:flex-row md:items-center md:justify-between md:space-y-0 md:space-x-4">
+                        <div>
+                            <h5>
+                                <span class="text-gray-700">Search Your Content...</span>
+                            </h5>
+                        </div>
+                    </div>
+                    <div
+                        class="grid w-full grid-cols-12 justify-items-stretch place-items-center gap-x-3 gap-y-4 rounded bg-white py-3 dark:bg-gray-800">
+                        <div class="col-span-4">
+                            <label for="location-form" class="sr-only">Search</label>
+                            <div class="relative">
+                                <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                                    <svg class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="currentColor"
+                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <input type="text" id="location-form"
+                                    class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pl-10 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                                    placeholder="Search using Name, Title or Slug" />
+                            </div>
+                        </div>
+                        <div class="col-span-2 flex items-center justify-center">
+                            <div class="relative w-full">
+                                <button id="dropdownStatus" data-dropdown-toggle="dropdownSta"
+                                    class="inline-flex bg-gray-50 relative items-center justify-between rounded-lg w-full border-gray-200 border-2 px-4 py-2.5 text-center text-sm font-medium text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                                    type="button">
+                                    Status
+                                    <svg class="ml-2 h-4 w-4" aria-hidden="true" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- Dropdown menu -->
+                            <div id="dropdownSta"
+                                class="z-10 hidden absolute left-0 top-0 w-56 rounded-lg bg-white p-3 shadow dark:bg-gray-700">
+                                <ul class="space-y-2 text-sm" aria-labelledby="dropdownStatus">
+                                    <li class="flex items-center">
+                                        <input id="all" type="checkbox" value=""
+                                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-600 focus:ring-2 focus:ring-primary-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-primary-600" />
+
+                                        <label for="all"
+                                            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                                            All
+                                        </label>
+                                    </li>
+
+                                    <li class="flex items-center">
+                                        <input id="draft" type="checkbox" value=""
+                                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-600 focus:ring-2 focus:ring-primary-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-primary-600" />
+
+                                        <label for="draft"
+                                            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                                            Draft
+                                        </label>
+                                    </li>
+
+                                    <li class="flex items-center">
+                                        <input id="pending" type="checkbox" value=""
+                                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-600 focus:ring-2 focus:ring-primary-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-primary-600" />
+
+                                        <label for="pending"
+                                            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                                            Pending
+                                        </label>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <input id="published" type="checkbox" value=""
+                                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-600 focus:ring-2 focus:ring-primary-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-primary-600" />
+
+                                        <label for="published"
+                                            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                                            Published
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-span-2 flex items-center justify-center">
+                            <button id="dropdownCategory" data-dropdown-toggle="dropdownCat"
+                                class="inline-flex bg-gray-50 items-center justify-between rounded-lg w-full border-gray-200 border-2 px-4 py-2.5 text-center text-sm font-medium text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                                type="button">
+                                Category
+                                <svg class="ml-2 h-4 w-4" aria-hidden="true" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+
+                            <!-- Dropdown menu -->
+                            <div id="dropdownCat"
+                                class="z-10 hidden w-56 rounded-lg bg-white p-3 shadow dark:bg-gray-700">
+                                <ul class="space-y-2 text-sm" aria-labelledby="dropdownCategory">
+                                    <li class="flex items-center">
+                                        <input id="universities" type="checkbox" value=""
+                                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-600 focus:ring-2 focus:ring-primary-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-primary-600" />
+
+                                        <label for="universities"
+                                            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                                            UK Universities
+                                        </label>
+                                    </li>
+
+                                    <li class="flex items-center">
+                                        <input id="study" type="checkbox" value=""
+                                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-600 focus:ring-2 focus:ring-primary-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-primary-600" />
+
+                                        <label for="study"
+                                            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                                            Study in UK
+                                        </label>
+                                    </li>
+
+                                    <li class="flex items-center">
+                                        <input id="course" type="checkbox" value=""
+                                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-600 focus:ring-2 focus:ring-primary-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-primary-600" />
+
+                                        <label for="course"
+                                            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                                            Course
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-span-2 flex items-center justify-center">
+                            <button id="dropdownTag" data-dropdown-toggle="dropdownTa"
+                                class="inline-flex bg-gray-50 items-center justify-between rounded-lg w-full border-gray-200 border-2 px-4 py-2.5 text-center text-sm font-medium text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                                type="button">
+                                Tag
+                                <svg class="ml-2 h-4 w-4" aria-hidden="true" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+
+                            <!-- Dropdown menu -->
+                            <div id="dropdownTa"
+                                class="z-50 hidden w-80 rounded-lg bg-white px-3 pt-1 shadow dark:bg-gray-700">
+                                <div aria-labelledby="dropdownTag">
+                                    <div class="pb-2 pt-3">
+                                        <label for="input-group-search" class="sr-only">Search</label>
+                                        <div class="relative">
+                                            <div
+                                                class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
+                                                <svg class="h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                                    fill="currentColor" viewBox="0 0 20 20"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                            <input type="text" id="input-group-search"
+                                                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 pl-10 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                                                placeholder="Search tag..." />
+                                        </div>
+                                    </div>
+                                    <hr class="py-2" />
+                                    <ul class="space-y-2 mb-3">
+                                        <li class="flex items-center">
+                                            <input id="universitiesTag" type="checkbox" value=""
+                                                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-600 focus:ring-2 focus:ring-primary-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-800 dark:focus:ring-primary-600" />
+
+                                            <label for="universitiesTag"
+                                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                                                UK Universities
+                                            </label>
+                                        </li>
+
+                                        <li class="flex items-center">
+                                            <input id="studyTag" type="checkbox" value=""
+                                                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-600 focus:ring-2 focus:ring-primary-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-800 dark:focus:ring-primary-600" />
+
+                                            <label for="studyTag"
+                                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                                                Study in UK
+                                            </label>
+                                        </li>
+
+                                        <li class="flex items-center">
+                                            <input id="courseTag" type="checkbox" value=""
+                                                class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-primary-600 focus:ring-2 focus:ring-primary-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-800 dark:focus:ring-primary-600" />
+
+                                            <label for="courseTag"
+                                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-100">
+                                                Course
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit"
+                            class="col-span-2 inline-flex items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 md:w-auto">
+                            <svg class="-ml-1 mr-2 h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Search
+                        </button>
+                    </div>
+
+                    <div class="items-center justify-between block w-full py-3 border-t dark:border-gray-700 md:flex">
+                        <div class="flex flex-wrap mb-4 md:mb-0">
+                            <div
+                                class="flex items-center w-full mb-2 mr-4 text-sm font-medium text-gray-900 dark:text-white md:w-auto md:mb-0">
+                                Filter by:
+                            </div>
+                            <div class="flex items-center mr-4">
+                                <input id="all-products" type="radio" value="" name="show-only"
+                                    class="w-4 h-4 bg-gray-100 border-gray-300 text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                                <label for="all-products"
+                                    class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    Article
+                                </label>
+                            </div>
+                            <div class="flex items-center mr-4">
+                                <input id="sort-category" type="radio" value="" name="show-only"
+                                    class="w-4 h-4 bg-gray-100 border-gray-300 text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                                <label for="sort-category"
+                                    class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    Page
+                                </label>
+                            </div>
+                            <div class="flex items-center mr-4">
+                                <input id="sort-price" type="radio" value="" name="show-only"
+                                    class="w-4 h-4 bg-gray-100 border-gray-300 text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                                <label for="sort-price"
+                                    class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    Team
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button id="actionsDropdownButton" data-dropdown-toggle="actionsDropdown"
+                                class="flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                                type="button">
+                                <svg class="-ml-1 mr-1.5 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path clip-rule="evenodd" fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z">
+                                    </path>
+                                </svg>
+
+                                Actions
+                            </button>
+                            <div id="actionsDropdown"
+                                class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                                    aria-labelledby="actionsDropdownButton">
+                                    <li>
+                                        <a href="#"
+                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                            Mass Edit
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="py-1">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                                        Delete all
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+</body>
+
+</html>
